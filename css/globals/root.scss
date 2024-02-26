@@ -1,0 +1,9 @@
+@use '../variables/breakpoints' as *;
+@use '../functions/strip-unit' as *;
+
+:root {
+	--breakpoint-s: #{strip-unit(map-get($breakpoints, small))};
+	--breakpoint-m: #{strip-unit(map-get($breakpoints, medium))};
+	--breakpoint-l: #{strip-unit(map-get($breakpoints, large))};
+	--breakpoint-xl: #{strip-unit(map-get($breakpoints, x-large))};
+}

@@ -1,0 +1,62 @@
+/* Import all the partials. */
+@use 'mixins/mq' as *;
+
+@import "objects/fluid";
+@import "globals/root";
+@import "globals/font-styles";
+@import "globals/fluid-font";
+
+* {
+	box-sizing: border-box;
+}
+
+.my-headline {
+	--value-min: 20;
+	--value-max: 50;
+	--breakpoint-min: var(--breakpoint-m);
+	--breakpoint-max: var(--breakpoint-l);
+	font-size: var(--fluid-value);
+}
+
+.my-div {
+	width: 100px;
+	height: 100px;
+
+	@include mq($from: medium) {
+		--value-min: 100;
+		--value-max: 200;
+		--breakpoint-min: var(--breakpoint-m);
+		--breakpoint-max: var(--breakpoint-l);
+		width: var(--fluid-value);
+	}
+
+	@include mq($from: large) {
+		--value-min: 100;
+		--value-max: 200;
+		--breakpoint-min: var(--breakpoint-l);
+		--breakpoint-max: var(--breakpoint-xl);
+		width: 200px;
+		height: var(--fluid-value);
+	}
+}
+
+.container > * {
+	padding: 10px;
+	font-family: sans-serif;
+
+	@include mq($from: small) {
+		background-color: lightblue;
+	}
+
+	@include mq($from: medium) {
+		background-color: lightgreen;
+	}
+
+	@include mq($from: large) {
+		background-color: lightpink;
+	}
+
+	@include mq($from: x-large) {
+		background-color: lightslategrey;
+	}
+}

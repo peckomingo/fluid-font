@@ -1,0 +1,24 @@
+@use '../mixins/mq' as *;
+
+/* values in px are needed so we can make calculations with calc() */
+
+.fluid-font-h1 {
+	--font-size-s: 18;
+	--font-size-m: 24;
+	--font-size-l: 32;
+	--font-size-xl: 48;
+}
+
+.fluid-font-h2 {
+	--font-size-s: 16;
+	--font-size-m: 20;
+	--font-size-l: 28;
+	--font-size-xl: 40;
+}
+
+.fluid-font-h3 {
+	--font-size-s: 14;
+	--font-size-m: 18;
+	--font-size-l: 26;
+	--font-size-xl: 36;
+}

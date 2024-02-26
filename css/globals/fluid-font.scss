@@ -1,0 +1,24 @@
+[class*='fluid-font-'] {
+	@include mq($from: small) {
+		--value-min: var(--font-size-s);
+		--value-max: var(--font-size-m);
+		--breakpoint-min: var(--breakpoint-s);
+		--breakpoint-max: var(--breakpoint-m);
+	}
+
+	@include mq($from: medium) {
+		--value-min: var(--font-size-m);
+		--value-max: var(--font-size-l);
+		--breakpoint-min: var(--breakpoint-m);
+		--breakpoint-max: var(--breakpoint-l);
+	}
+
+	@include mq($from: large) {
+		--value-min: var(--font-size-l);
+		--value-max: var(--font-size-xl);
+		--breakpoint-min: var(--breakpoint-l);
+		--breakpoint-max: var(--breakpoint-xl);
+	}
+
+	font-size: var(--fluid-value);
+}
